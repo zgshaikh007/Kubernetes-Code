@@ -1,0 +1,100 @@
+    1  exit
+    2  ssh-keygen
+    3  cd .ssh
+    4  ls
+    5  nano authorized_keys
+    6  cat id_rsa_pub
+    7  cat id_rsa.pub
+    8  ssh ubuntu@54.221.46.28
+    9  nano authorized_keys
+   10  ssh ubuntu@3.88.12.106
+   11  exit
+   12  sudo apt-get update && sudo apt-get upgrade -y
+   13  sudo apt-get install haproxy -y
+   14  nano /etc/haproxy/haproxy.cfg
+   15  sudo nano /etc/haproxy/haproxy.cfg
+   16  systemctl restart haproxy
+   17  sudo systemctl restart haproxy
+   18  sudo systemctl status haproxy
+   19  nc -v localhost 6443
+   20  exit
+   21  mkdir -p $HOME/.kube
+   22  scp master1:/etc/kubernetes/admin.conf $HOME/.kube/config
+   23  scp 3.88.12.106:/etc/kubernetes/admin.conf $HOME/.kube/config
+   24  sudo scp 3.88.12.106:/etc/kubernetes/admin.conf $HOME/.kube/config
+   25  sudo scp ubuntu@3.88.12.106:/etc/kubernetes/admin.conf $HOME/.kube/config
+   26  ssh ubuntu@3.88.12.106
+   27  sudo scp root@3.88.12.106:/etc/kubernetes/admin.conf $HOME/.kube/config
+   28  sudo scp ubuntu@3.88.12.106:/etc/kubernetes/admin.conf $HOME/.kube/config
+   29  scp ubuntu@3.88.12.106:/etc/kubernetes/admin.conf $HOME/.kube/config
+   30  sudo scp master1:/etc/kubernetes/admin.conf $HOME/.kube/config
+   31  sudo -i
+   32  scp ubuntu@3.88.12.106:/etc/kubernetes/admin.conf $HOME/.kube/config
+   33  sudo scp ubuntu@3.88.12.106:/etc/kubernetes/admin.conf $HOME/.kube/config
+   34  scp ubuntu@3.88.12.106:/etc/kubernetes/admin.conf $HOME/.kube/config
+   35  sudo scp ubuntu@3.88.12.106:/etc/kubernetes/admin.conf $HOME/.kube/config
+   36  sudo scp ubuntu@3.88.12.106:~ $HOME/.kube/config
+   37  ssh ubuntu@3.88.12.106
+   38  sudo apt-install openssh-server
+   39  sudo install openssh-server
+   40  sudo apt-get openssh-server
+   41  sudo apt-get install openssh-server
+   42  sudo service ssh status
+   43  sudo nano /etc/ssh/sshd_conf
+   44  sudo nano /etc/ssh/sshd_config
+   45  sudo service ssh status
+   46  sudo scp ubuntu@3.88.12.106:/etc/kubernetes/admin.conf $HOME/.kube/config
+   47  sudo scp ubuntu@3.88.12.106:~ $HOME/.kube/config
+   48  scp ubuntu@3.88.12.106:/etc/kubernetes/admin.conf $HOME/.kube/config
+   49  exit
+   50  scp ubuntu@3.88.12.106:/etc/kubernetes/admin.conf $HOME/.kube/config
+   51  sudo scp ubuntu@3.88.12.106:/etc/kubernetes/admin.conf $HOME/.kube/config
+   52  sudo scp ubuntu@ip-172-31-29-25@3.88.12.106:/etc/kubernetes/admin.conf $HOME/.kube/config
+   53  sudo scp root@3.88.12.106:/etc/kubernetes/admin.conf $HOME/.kube/config
+   54  sudo scp ubuntu@3.88.12.106:/etc/kubernetes/admin.conf $HOME/.kube/config
+   55  ls -ld $HOME/.kube/
+   56  sudo scp ubuntu@3.88.12.106:/etc/kubernetes/admin.conf $HOME/.kube/config
+   57  sudo scp root@3.88.12.106:/etc/kubernetes/admin.conf $HOME/.kube/config
+   58  sudo scp ubuntu@ip-172-31-29-25@3.88.12.106:/etc/kubernetes/admin.conf $HOME/.kube/config
+   59  scp ubuntu@3.88.12.106:/etc/kubernetes/admin.conf $HOME/.kube/config
+   60  chown $(id -u):$(id -g) $HOME/.kube/config
+   61  ls -ld $HOME/.kube/
+   62  ls -ld $HOME/.kube/config
+   63  snap install kubectl --classic
+   64  sudo snap install kubectl --classic
+   65  kubectl get nodes
+   66  exit
+   67  sudo systemctl status haproxy
+   68  kubectl get nodes
+   69  exit
+   70  history
+   71  pwd
+   72  mkdir history
+   73  cd history
+   74  history
+   75  history > history_15Aug23.txt
+   76  ls
+   77  nano history_15Aug23.txt
+   78  cd ..
+   79  git clone https://github.com/zgshaikh007/Kubernetes-Code.git
+   80  ls
+   81  cp /history/history_15Aug23.txt /Kubernetes-Code
+   82  cp /history/history_15Aug23.txt/ /Kubernetes-Code
+   83  cp /home/ubuntu/history/history_15Aug23.txt/ /Kubernetes-Code
+   84  cp /home/ubuntu/history/history_15Aug23.txt /home/ubuntu/Kubernetes-Code
+   85  ls 
+   86  cd Kubernetes-Code
+   87  ls
+   88  git add history_15Aug23.txt
+   89  git status
+   90  git commit history_15Aug23.txt
+   91  git commit "txt"  history_15Aug23.txt
+   92  git commit "txt"
+   93  git commit
+   94  git commit -m "txt"
+   95  git push  history_15Aug23.txt
+   96  git status
+   97  git push -u origin main
+   98  git push https://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@github.com/zgshaikh007/Kubernetes-Code.git
+   99  history
+  100  history > worker_history_15Aug23.txt
