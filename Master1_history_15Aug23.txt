@@ -1,0 +1,76 @@
+    1  exit
+    2  ssh-keygen
+    3  cd .ssh
+    4  ls
+    5  cat id_rsa.pub
+    6  nano authorized_keys
+    7  ssh ubuntu@44.208.34.81
+    8  nano authorized_keys
+    9  exit
+   10  sudo apt-get update
+   11  sudo swapoff -a
+   12  sudo apt-get update && sudo apt-get install -y apt-transport-https curl
+   13  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+   14  cat <<EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list
+   15  deb https://apt.kubernetes.io/ kubernetes-xenial main
+   16  EOF
+   17  sudo apt-get update
+   18  apt-get install -y kubelet kubeadm kubectl
+   19  sudo apt-get install -y kubelet kubeadm kubectl
+   20  cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
+   21  overlay
+   22  br_netfilter
+   23  EOF
+   24  sudo modprobe overlay
+   25  sudo modprobe br_netfilter
+   26  cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
+   27  net.bridge.bridge-nf-call-iptables = 1
+   28  net.bridge.bridge-nf-call-ip6tables = 1
+   29  net.ipv4.ip_forward=1
+   30  EOF
+   31  sudo sysctl --system
+   32  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+   33  echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+   34  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   35  sudo apt-get update
+   36  sudo apt-get install -y containerd.io
+   37  sudo mkdir -p /etc/containerd
+   38  sudo containerd config default | sudo tee /etc/containerd/config.toml
+   39  nano /etc/containerd/config.toml
+   40  sudo nano /etc/containerd/config.toml
+   41  sudo systemctl restart containerd
+   42  sudo systemctl daemon-reload
+   43  sudo kubeadm init --control-plane-endpoint "44.208.34.81:6443" --upload-certs --pod-network-cidr=192.168.0.0/16
+   44  mkdir -p $HOME/.kube
+   45  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+   46  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+   47  kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.26.1/manifests/tigera-operator.yaml
+   48  kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.26.1/manifests/custom-resources.yaml
+   49  watch kubectl get pods -n calico-system
+   50  kubectl taint nodes --all node-role.kubernetes.io/control-plane-
+   51  kubectl taint nodes --all node-role.kubernetes.io/master-
+   52  kubectl get nodes -o wide
+   53  kubectl get nodes
+   54  exit
+   55  mkdir -p $HOME/.kube
+   56  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+   57  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+   58  ssh ubuntu@44.208.34.81
+   59  exit
+   60  sudo apt-get install openssh-server
+   61  sudo service ssh status
+   62  exit
+   63  ls -l /etc/kubernetes/admin.conf
+   64  sudo chmod 644 /etc/kubernetes/admin.conf
+   65  ls -l /etc/kubernetes/admin.conf
+   66  sudo chown ubuntu:users /etc/kubernetes/admin.conf
+   67  ls -l /etc/kubernetes/admin.conf
+   68  sudo chown ubuntu:ubuntu /etc/kubernetes/admin.conf
+   69  ls -l /etc/kubernetes/admin.conf
+   70  exit
+   71  git clone https://github.com/zgshaikh007/Kubernetes-Code.git
+   72  ls
+   73  cd Kubernetes-Code
+   74  ls
+   75  history
+   76  history > Master1_history_15Aug23.txt
